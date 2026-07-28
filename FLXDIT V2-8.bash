@@ -1,8 +1,10 @@
 #FLXDIT V2-8 27-07-2026 01-39 OK!
 
-#--------------- roda e executa all-in-one 27-07-2026 (SIZE ~91GB) OK
-if false; then
+#--------------- roda e executa all-in-one 27-07-2026 (SIZE ~91GB) OK~...
 
+
+if false; then
+# GOOGLE DRIVE ID ARCHIVE
 cd /workspace && \
 $(which python3) -m pip install -q gdown > /dev/null && \
 rm -f "FLXDIT V2-8.bash" && \
@@ -11,6 +13,18 @@ cd /workspace && \
 sed -i -e 's/\r$//' "FLXDIT V2-8.bash" && \
 chmod +x "FLXDIT V2-8.bash" && \
 ./"FLXDIT V2-8.bash"
+
+#---------------------------------------------------------------------------------------------------------------
+
+# GIT VERSION 
+cd /workspace && \
+rm -f "FLXDIT V2-8.bash" && \
+wget -q --show-progress -O "FLXDIT V2-8.bash" "https://raw.githubusercontent.com/PTKELITE/FLXDIT-V2-8/refs/heads/main/FLXDIT%20V2-8.bash" && \
+sed -i -e 's/\r$//' "FLXDIT V2-8.bash" && \
+chmod +x "FLXDIT V2-8.bash" && \
+./"FLXDIT V2-8.bash"
+
+
 
 fi
 
@@ -248,11 +262,14 @@ TOOLS LINE
 #touch /workspace/runpod-slim/ComfyUI/models/loras/none.safetensors
 
 
-HOTKEYS: REPLACE CTRL+F TO WORD TO EXACLY KEY ON TOOLS 
+HOTKEYS: REPLACE CTRL+F TO WORD TO EXACLY KEY ON TOOLS:
+
 HFKEYS
 CIVITAIKEYS
 
 ----------
+
+TEMPAREA
 
 ----------
 
