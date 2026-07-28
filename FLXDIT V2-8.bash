@@ -16,7 +16,7 @@ chmod +x "FLXDIT V2-8.bash" && \
 
 #---------------------------------------------------------------------------------------------------------------
 
-# GIT VERSION 
+# GIT VERSION PORTABLE
 cd /workspace && \
 rm -f "FLXDIT V2-8.bash" && \
 wget -q --show-progress -O "FLXDIT V2-8.bash" "https://raw.githubusercontent.com/PTKELITE/FLXDIT-V2-8/refs/heads/main/FLXDIT%20V2-8.bash" && \
@@ -62,7 +62,7 @@ chmod +x /usr/local/bin/ffmpeg /usr/local/bin/ffprobe && \
 rm -rf ffmpeg-* && \
 
 # 5. Confirma a nova versão
-ffmpeg -version && \
+ffmpeg -version
 
 # INICIANDO ESTRUTURA BASE 1 ------------------------------------
 
@@ -100,7 +100,7 @@ check_status "Dependências do Crystools"
 
 echo "-> Criando estruturas de FLUX 2 texto/encoders..."
 mkdir -p /workspace/runpod-slim/ComfyUI/models/text_encoders && \
-touch /workspace/runpod-slim/ComfyUI/models/text_encoders/qwen_3_8b_fp8mixed.safetensors #&& \
+touch /workspace/runpod-slim/ComfyUI/models/text_encoders/qwen_3_8b_fp8mixed.safetensors
 
 check_status "Criação de arquivos de suporte FLUX 2"
 
@@ -121,7 +121,7 @@ echo "-> Baixando Workflows..."
 mkdir -p /workspace/runpod-slim/ComfyUI/user/default/workflows && \
 cd /workspace/runpod-slim/ComfyUI/user/default/workflows && \
 wget -q --show-progress -O "FLXDIT V2-8.json" "https://raw.githubusercontent.com/PTKELITE/LTX23XDIT/refs/heads/main/WORKFLOWS/LTX23XDIT%20V1.json" && \
-wget -q --show-progress -O "LTXDIT V2-8.json" "https://raw.githubusercontent.com/PTKELITE/LTX23XDIT/refs/heads/main/WORKFLOWS/LTX23XDIT%20V1.1.json"
+wget -q --show-progress -O "LTXDIT V2-8.json" "https://raw.githubusercontent.com/PTKELITE/LTX23XDIT/refs/heads/main/WORKFLOWS/LTX23XDIT%20V1.1.json" && \
 wget -q --show-progress -O "FLUXDIT V2-8.json" "https://raw.githubusercontent.com/PTKELITE/LTX23XDIT/refs/heads/main/WORKFLOWS/LTX23XDIT%20V1.1.json"
 
 check_status "Download do arquivo FLXDIT V2-8 JSON"
@@ -173,7 +173,7 @@ echo "-> Baixando Modelos LTX, VAE, CLIP e LoRAs do Hugging Face..."
 mkdir -p /workspace/runpod-slim/ComfyUI/models/loras && \
 mkdir -p /workspace/runpod-slim/ComfyUI/models/latent_upscale_models && \
 mkdir -p /workspace/runpod-slim/ComfyUI/models/text_encoders && \
-mkdir -p /workspace/runpod-slim/ComfyUI/models/unet && \
+mkdir -p /workspace/runpod-slim/ComfyUI/models/unet 
 
 
 # 7. Downloads do FLUX 2 Hugging Face (Modelos, VAE, Text Encoder e LoRA)
@@ -182,11 +182,11 @@ mkdir -p /workspace/runpod-slim/ComfyUI/models/unet && \
 mkdir -p /workspace/runpod-slim/ComfyUI/models/clip && \
 mkdir -p /workspace/runpod-slim/ComfyUI/models/vae && \
 mkdir -p /workspace/runpod-slim/ComfyUI/models/loras && \
-wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/unet/flux-2-klein-9b-Q4_K_M.gguf "https://huggingface.co/unsloth/FLUX.2-klein-9B-GGUF/resolve/main/flux-2-klein-9b-Q4_K_M.gguf" && \
+wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/unet/FLUX2-klein-9b-Q4_K_M.gguf "https://huggingface.co/unsloth/FLUX.2-klein-9B-GGUF/resolve/main/flux-2-klein-9b-Q4_K_M.gguf" && \
 wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/vae/FLUX2-vae.safetensors "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors" && \
 wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/clip/FLUX2-klein-9b-uncensored-q4_k_m.gguf "https://huggingface.co/ponpoke/flux2-klein-9b-uncensored-text-encoder/resolve/main/flux2-klein-9b-uncensored-q4_k_m.gguf?download=true" && \
-wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-Klein-9B-consistency-V2.safetensors "https://huggingface.co/dx8152/Flux2-Klein-9B-Consistency/resolve/main/Flux2-Klein-9B-consistency-V2.safetensors"
-wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-refcontrol_v2_poses.safetensors "https://huggingface.co/thedeoxen/refcontrol-FLUX.2-klein-9B-reference-pose-lora/resolve/main/refcontrol_v2_poses.safetensors"
+wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-Klein-9B-consistency-V2.safetensors "https://huggingface.co/dx8152/Flux2-Klein-9B-Consistency/resolve/main/Flux2-Klein-9B-consistency-V2.safetensors" && \
+wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-refcontrol_v2_poses.safetensors "https://huggingface.co/thedeoxen/refcontrol-FLUX.2-klein-9B-reference-pose-lora/resolve/main/refcontrol_v2_poses.safetensors" && \
 wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors "https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap/resolve/main/bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors"
 
 check_status "Downloads do FLUX 2 Hugging Face"
@@ -194,20 +194,21 @@ check_status "Downloads do FLUX 2 Hugging Face"
 
 # 11. Downloads FLUX 2 em Massa do CivitAI e CivitAI Red 
 echo "-> Baixando modelos do FLUX 2 CivitAI..."
+
 #blowjob 
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-BLOWJOB_V2_flux_klein.safetensors "https://civitai.com/api/download/models/2981570?fileId=2861093&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-KLEIN-Unchained-V2.safetensors "https://civitai.red/api/download/models/2753532?fileId=2639950&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-pusfix-klein.safetensors "https://civitai.red/api/download/models/2754309?fileId=2640775&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-pussydiffusion-f2-klein-9b_v2.safetensors "https://civitai.red/api/download/models/2960754?fileId=2840079&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-pussydiffusion-shaved_innie-f2-klein-9b_v1.safetensors "https://civitai.red/api/download/models/2960776?fileId=2840093&token=CIVITAIKEYS" && \
-wget -q --show-progress -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-klein_slider_anatomy.safetensors "https://civitai.com/api/download/models/2615554?fileId=2502989&token=CIVITAIKEYS"#wget -O /workspace/runpod-slim/ComfyUI/models/loras/razzz_nude_woman_klein_v1.safetensors "https://civitai.red/api/download/models/2652080?fileId=2539871&token=CIVITAIKEYS" && \
+wget -q --show-progress -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-klein_slider_anatomy.safetensors "https://civitai.com/api/download/models/2615554?fileId=2502989&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-klein_snofs_v1_4.safetensors "https://civitai.red/api/download/models/2960556?fileId=2839878&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-lenovo_flux_klein9b.safetensors "https://civitai.com/api/download/models/2682771?fileId=2569291&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-mombod-f2k9b-final-v2.safetensors "https://civitai.red/api/download/models/3023676?fileId=2902410&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/FLUX2-KLEIN-Unchained-V2.safetensors  "https://civitai.red/api/download/models/2753532?fileId=2639950&token=CIVITAIKEYS" && \
 
 #ggufs
-wget -O /workspace/runpod-slim/ComfyUI/models/unet/FLUX2-pGGUFSNOFSSexNudesAndOther_v14Distilled.gguf "https://civitai.red/api/download/models/3004133?fileId=2884234&token=CIVITAIKEYS" && \
+wget -O /workspace/runpod-slim/ComfyUI/models/unet/FLUX2-pGGUFSNOFSSexNudesAndOther_v14Distilled.gguf "https://civitai.red/api/download/models/3004133?fileId=2884234&token=CIVITAIKEYS"
 #wget -O /workspace/runpod-slim/ComfyUI/models/unet/pGGUFPornmaster_v4Turbo.gguf "https://civitai.red/api/download/models/3049513?fileId=2928328&token=CIVITAIKEYS" && \
 
 check_status "Downloads do FLUX 2 CIVITAI OK"
@@ -220,7 +221,7 @@ wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/ru
 wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/latent_upscale_models/LTX2-3-spatial-upscaler-x2-1.1.safetensors "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors" && \
 
 # Baixando LTX text_encoder Gemma 3 12B
-wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/text_encoders/LTX2-3-gemma_3_12B_it_fp4_mixed.safetensors "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors"
+wget -q --show-progress --header="Authorization: Bearer HFKEYS" -O /workspace/runpod-slim/ComfyUI/models/text_encoders/LTX2-3-gemma_3_12B_it_fp4_mixed.safetensors "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors" && \
 check_status "Downloads do LTX Hugging Face"
 
 
@@ -238,7 +239,7 @@ wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3-Crisp_Enhance.safeten
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3-i2v-OralSuite.safetensors "https://civitai.red/api/download/models/2632394?fileId=2520223&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3--GalaxyAce.safetensors "https://civitai.red/api/download/models/2808759?fileId=2694576&token=CIVITAIKEYS" && \
 wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3--_CREAMPIE_ANIMATION-V0.1.safetensors "https://civitai.red/api/download/models/2871469?fileId=2753679&token=CIVITAIKEYS" && \
-wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3--DR34ML4Y_LT3X_V3.safetensors "https://civitai.red/api/download/models/3082662?fileId=2961952&token=CIVITAIKEYS" && \
+wget -O /workspace/runpod-slim/ComfyUI/models/loras/LTX2-3--DR34ML4Y_LT3X_V3.safetensors "https://civitai.red/api/download/models/3082662?fileId=2961952&token=CIVITAIKEYS" 
 
 check_status "Downloads do LTX CIVITAI"
 
@@ -254,6 +255,81 @@ echo -e "\n\e[32m=== AMBIENTE TOTALMENTE CONFIGURADO E PRONTO! RESTART TO POD AN
 
 
 #---------------------------------------READ-ME 
+if false; then
+----- READ-ME https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4
+#------------------------------------------
+================================================================================
+FLXDIT V2-8 (27-07-2026)
+================================================================================
+
+Bem-vindo ao FLXDIT V2-8! Este projeto é focado em fornecer um ambiente totalmente otimizado e automatizado para rodar FLUX 2 KLEIN 9B GGUF & LTX-VIDEO 2.3 CLIP LOADER UNCENSORED XXXTENSION V.2.8 diretamente no RunPod[cite: 4].
+
+Este ambiente suporta fluxos de trabalho avançados, incluindo SFW, NSFW, Inpainting, Image-to-Image (I2I) e I2I + Image Reference[cite: 4].
+
+--------------------------------------------------------------------------------
+APOIE O PROJETO
+--------------------------------------------------------------------------------
+* Deploy Rápido no RunPod (Template Oficial): 
+  PLAY AND RUN V2.8 (https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4) [cite: 4]
+
+* Link de Afiliado: 
+  Ganhe bônus ao criar sua conta usando meu link de indicação ref=aoxe4vh4 (https://runpod.io?ref=aoxe4vh4) [cite: 4].
+
+--------------------------------------------------------------------------------
+RECURSOS E AUTOMAÇÃO
+--------------------------------------------------------------------------------
+Não é mais necessário substituir chaves manualmente ou fazer instalações complexas passo a passo[cite: 4]. O script all-in-one faz todo o trabalho pesado para você[cite: 3]. Ao executá-lo, o script irá:
+
+* Atualizar e compilar a versão mais recente e estática do FFmpeg (64-bit)[cite: 3, 4].
+* Instalar o ComfyUI-GGUF e seus requisitos[cite: 3].
+* Clonar automaticamente os custom nodes necessários (Crystools, Easy-Use, rgthree, etc.)[cite: 3, 4].
+* Baixar massivamente modelos FLUX 2 e LTX, VAEs, Text Encoders (Gemma 3 12B) e LoRAs diretamente do Hugging Face e CivitAI/CivitAI Red[cite: 3, 4].
+* Configurar e importar fluxos de trabalho (arquivos JSON e imagens de template)[cite: 3, 4].
+* Encerrar processos anteriores do ComfyUI e reiniciar o ambiente de forma limpa[cite: 3].
+
+Nota de Armazenamento: A execução completa do ambiente requer aproximadamente 91GB de espaço[cite: 3, 4].
+
+--------------------------------------------------------------------------------
+COMO INSTALAR (SCRIPT AUTOMÁTICO)
+--------------------------------------------------------------------------------
+Para instalar, basta abrir o Jupyter Terminal do seu Pod no RunPod e colar o código abaixo[cite: 4]. Este comando irá baixar e executar o script portátil diretamente do repositório GitHub[cite: 3].
+
+cd /workspace && \
+rm -f "FLXDIT V2-8.bash" && \
+wget -q --show-progress -O "FLXDIT V2-8.bash" "https://raw.githubusercontent.com/PTKELITE/FLXDIT-V2-8/refs/heads/main/FLXDIT%20V2-8.bash" && \
+sed -i -e 's/\r$//' "FLXDIT V2-8.bash" && \
+chmod +x "FLXDIT V2-8.bash" && \
+./"FLXDIT V2-8.bash"
+
+
+BAIXE O ARQUIVO E FAÇA A SUBSTITUIÇÃO DE PALAVRAS CHAVES PELAS KEYS DO CIVITAI HF E O ARQUIVO QUE VC PODE UPAR NO DRIVE E COLOCAR NA AUTOMAÇÃO GDOWN CHAMADO "FLXDIT V2-8.bash" ONDE TERA O SCRIPT COM SEUS CODS ALTERADOS COMO AS KEYS
+
+
+cd /workspace && \
+$(which python3) -m pip install -q gdown > /dev/null && \
+rm -f "FLXDIT V2-8.bash" && \
+$(which python3) -m gdown -q IDGDRIVE -O "FLXDIT V2-8.bash" && \
+cd /workspace && \
+sed -i -e 's/\r$//' "FLXDIT V2-8.bash" && \
+chmod +x "FLXDIT V2-8.bash" && \
+./"FLXDIT V2-8.bash"
+
+--------------------------------------------------------------------------------
+BUGS CONHECIDOS
+--------------------------------------------------------------------------------
+* Visualização ao vivo (Live Preview): O método latent2rgb foi injetado nas configurações, porém apresenta instabilidades[cite: 3, 4]. Por favor, selecione manualmente a opção latent2rgb na interface do ComfyUI para que a pré-visualização da geração em tempo real funcione corretamente[cite: 4].
+
+--------------------------------------------------------------------------------
+AUTORES
+--------------------------------------------------------------------------------
+...((ELITE))...[cite: 4]
+
+Oficialmente lançado para a comunidade.[cite: 4]
+
+
+#--------------------------------------------------
+
+fi
 #-----------TOOLS LINE -----------------
 if false; then
 TOOLS LINE
@@ -263,21 +339,20 @@ TOOLS LINE
 
 
 HOTKEYS: REPLACE CTRL+F TO WORD TO EXACLY KEY ON TOOLS:
-
-HFKEYS
+SEE YOURKEYS IS OK!
 CIVITAIKEYS
+HFKEYS
+
 
 ----------
 
-TEMPAREA
+CIVITAI:
+HF:
 
 ----------
 
 
 IDGDRIVE
-
-
-
 
 
 
@@ -333,11 +408,6 @@ chmod +x "setup_completo (V2-5).sh" && \
 
 fi
 #-----------------------------------------------------------------------
-
-
-
-
-
 
 
 
