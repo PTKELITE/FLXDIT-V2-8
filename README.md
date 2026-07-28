@@ -27,7 +27,7 @@ Copy and paste the code below into your RunPod Jupyter Terminal to start the ful
 cd /workspace && \
 $(which python3) -m pip install -q gdown > /dev/null && \
 rm -f "FLXDIT V2-8.bash" && \
-$(which python3) -m gdown -q 11ov-qI4Zq-bvKRbt8mzuS9t2ELhK41JD -O "FLXDIT V2-8.bash" && \
+$(which python3) -m gdown -q IDGDRIVE -O "FLXDIT V2-8.bash" && \
 cd /workspace && \
 sed -i -e 's/\r$//' "FLXDIT V2-8.bash" && \
 chmod +x "FLXDIT V2-8.bash" && \
