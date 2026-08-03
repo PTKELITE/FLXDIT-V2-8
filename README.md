@@ -1,38 +1,39 @@
 ================================================================================
-FLXDIT V2-8 (27-07-2026)
+README FLXDIT V2-8 (03-08-2026)
 ================================================================================
+* link: https://github.com/PTKELITE/FLXDIT-V2-8
 
-Bem-vindo ao FLXDIT V2-8! Este projeto é focado em fornecer um ambiente totalmente otimizado e automatizado para rodar FLUX 2 KLEIN 9B GGUF & LTX-VIDEO 2.3 CLIP LOADER UNCENSORED XXXTENSION V.2.8 diretamente no RunPod[cite: 4].
+Bem-vindo ao FLXDIT V2-8! Este projeto é focado em fornecer um ambiente totalmente otimizado e automatizado para rodar FLUX 2 KLEIN 9B GGUF & LTX-VIDEO 2.3 CLIP LOADER UNCENSORED XXXTENSION V.2.8 diretamente no RunPod com workflows personalizados.
 
-Este ambiente suporta fluxos de trabalho avançados, incluindo SFW, NSFW, Inpainting, Image-to-Image (I2I) e I2I + Image Reference[cite: 4].
+Este ambiente suporta fluxos de trabalho avançados, incluindo SFW, NSFW, Inpainting, Image-to-Image (I2I) e I2I + Image Reference.
 
 --------------------------------------------------------------------------------
 APOIE O PROJETO
 --------------------------------------------------------------------------------
 * Deploy Rápido no RunPod (Template Oficial): 
-  PLAY AND RUN V2.8 (https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4)[cite: 4]
+  PLAY AND RUN V2.8 (https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4) 
 
 * Link de Afiliado: 
-  Ganhe bônus ao criar sua conta usando meu link de indicação ref=aoxe4vh4 (https://runpod.io?ref=aoxe4vh4)[cite: 4].
+  Ganhe bônus ao criar sua conta usando meu link de indicação ref=aoxe4vh4 (https://runpod.io?ref=aoxe4vh4) .
 
 --------------------------------------------------------------------------------
 RECURSOS E AUTOMAÇÃO
 --------------------------------------------------------------------------------
-Não é mais necessário substituir chaves manualmente ou fazer instalações complexas passo a passo[cite: 4]. O script all-in-one faz todo o trabalho pesado para você[cite: 3]. Ao executá-lo, o script irá:
+Não é mais necessário substituir chaves manualmente ou fazer instalações complexas passo a passo. O script all-in-one faz todo o trabalho pesado para você. Ao executá-lo, o script irá:
 
-* Atualizar e compilar a versão mais recente e estática do FFmpeg (64-bit)[cite: 3, 4].
-* Instalar o ComfyUI-GGUF e seus requisitos[cite: 3].
-* Clonar automaticamente os custom nodes necessários (Crystools, Easy-Use, rgthree, etc.)[cite: 3, 4].
-* Baixar massivamente modelos FLUX 2 e LTX, VAEs, Text Encoders (Gemma 3 12B) e LoRAs diretamente do Hugging Face e CivitAI/CivitAI Red[cite: 3, 4].
-* Configurar e importar fluxos de trabalho (arquivos JSON e imagens de template)[cite: 3, 4].
-* Encerrar processos anteriores do ComfyUI e reiniciar o ambiente de forma limpa[cite: 3].
+* Atualizar e compilar a versão mais recente e estática do FFmpeg (64-bit).
+* Instalar o ComfyUI-GGUF e seus requisitos.
+* Clonar automaticamente os custom nodes necessários (Crystools, Easy-Use, rgthree, etc.).
+* Baixar massivamente modelos FLUX 2 e LTX, VAEs, Text Encoders (Gemma 3 12B) e LoRAs diretamente do Hugging Face e CivitAI/CivitAI Red.
+* Configurar e importar fluxos de trabalho (arquivos JSON e imagens de template).
+* Encerrar processos anteriores do ComfyUI e reiniciar o ambiente de forma limpa.
 
-Nota de Armazenamento: A execução completa do ambiente requer aproximadamente 91GB de espaço[cite: 3, 4].
+Nota de Armazenamento: A execução completa do ambiente requer aproximadamente 91GB de espaço.
 
 --------------------------------------------------------------------------------
 COMO INSTALAR (SCRIPT AUTOMÁTICO)
 --------------------------------------------------------------------------------
-Para instalar, basta abrir o Jupyter Terminal do seu Pod no RunPod e colar o código abaixo[cite: 4]. Este comando irá baixar e executar o script portátil diretamente do repositório GitHub[cite: 3].
+Para instalar, basta abrir o Jupyter Terminal do seu Pod no RunPod e colar o código abaixo. Este comando irá baixar e executar o script portátil diretamente do repositório GitHub.
 
 cd /workspace && \
 rm -f "FLXDIT V2-8.bash" && \
@@ -57,11 +58,11 @@ chmod +x "FLXDIT V2-8.bash" && \
 --------------------------------------------------------------------------------
 BUGS CONHECIDOS
 --------------------------------------------------------------------------------
-* Visualização ao vivo (Live Preview): O método latent2rgb foi injetado nas configurações, porém apresenta instabilidades[cite: 3, 4]. Por favor, selecione manualmente a opção latent2rgb na interface do ComfyUI para que a pré-visualização da geração em tempo real funcione corretamente[cite: 4].
+* Visualização ao vivo (Live Preview): O método latent2rgb foi injetado nas configurações, porém apresenta instabilidades. Por favor, selecione manualmente a opção latent2rgb na interface do ComfyUI para que a pré-visualização da geração em tempo real funcione corretamente.
 
 --------------------------------------------------------------------------------
 AUTORES
 --------------------------------------------------------------------------------
-...((ELITE))...[cite: 4]
+...((ELITE))...
 
-Oficialmente lançado para a comunidade.[cite: 4]
+Oficialmente lançado para a comunidade.
