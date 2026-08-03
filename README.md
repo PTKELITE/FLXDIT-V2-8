@@ -10,10 +10,10 @@ Este ambiente suporta fluxos de trabalho avançados, incluindo SFW, NSFW, Inpain
 APOIE O PROJETO
 --------------------------------------------------------------------------------
 * Deploy Rápido no RunPod (Template Oficial): 
-  PLAY AND RUN V2.8 (https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4) [cite: 4]
+  PLAY AND RUN V2.8 (https://console.runpod.io/deploy?template=xbnsy24tdh&ref=aoxe4vh4)[cite: 4]
 
 * Link de Afiliado: 
-  Ganhe bônus ao criar sua conta usando meu link de indicação ref=aoxe4vh4 (https://runpod.io?ref=aoxe4vh4) [cite: 4].
+  Ganhe bônus ao criar sua conta usando meu link de indicação ref=aoxe4vh4 (https://runpod.io?ref=aoxe4vh4)[cite: 4].
 
 --------------------------------------------------------------------------------
 RECURSOS E AUTOMAÇÃO
